@@ -1,0 +1,8 @@
+import { createClient } from 'next-sanity'
+
+export const client = createClient({
+  projectId: (process.env.NEXT_PUBLIC_SANITY_PROJECT_ID || 'xvv8ax7w').trim(),
+  dataset: (process.env.NEXT_PUBLIC_SANITY_DATASET || 'production').trim(),
+  apiVersion: '2024-01-01',
+  useCdn: false, // CDN cache'ini atla — her zaman güncel veri al
+})

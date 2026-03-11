@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__Claude_Preview__preview_start",
+      "Bash(gh api repos/rasitsahinn/kalmezder-web/deployments --jq '.[0] | {sha: .sha[0:8], id}')",
+      "Bash(gh api repos/rasitsahinn/kalmezder-web/deployments/4040388923/statuses --jq '.[0] | {state, description}')",
+      "mcp__Sanity__query_documents",
+      "Bash(git checkout --orphan deploy-temp)",
+      "Bash(git add -A)",
+      "Bash(git commit -m \"feat: add image support to duyurular and etkinlikler pages\")"
+    ]
+  }
+}
